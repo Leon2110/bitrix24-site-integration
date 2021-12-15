@@ -28,7 +28,7 @@
   echo json_encode($contact['DEAL_ID'], JSON_UNESCAPED_UNICODE);
 
   function sendDataToBitrix($method, $data) {
-    $queryUrl = webhook_url . $method ;
+    $queryUrl = $webhook_url . $method ;
     $queryData = http_build_query($data);
 
     $curl = curl_init();
